@@ -15,8 +15,8 @@
    cd <your-repo-folder>
 
 3. **Build the Executable**: Run the following command to package the application into a single executable file:
-```bash
-python build-app.py
+   ```bash
+   python build-app.py
 
 4. **Locate the Executable**: After the build process completes, find the `main.exe` file in the `dist` folder. You can rename it or move it to any location you prefer.
 
