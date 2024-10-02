@@ -8,7 +8,7 @@
 ### Steps:
 1. **Clone the Repository**: Open a terminal and run the following command to clone the repository to your local machine:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/joshi427/yt-to-mp3.git
 
 2. **Navigate to the Cloned Repo**: Move into the directory of the cloned repository:
    ```bash
