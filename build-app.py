@@ -26,7 +26,7 @@ def build_app(script='main.py'):
         subprocess.check_call([sys.executable, "-m", "pip", "install", "pyinstaller"])
 
         print(f"Packaging {script} into a single executable...")
-        subprocess.check_call(['pyinstaller', script, '--onefile', '-w'])
+        subprocess.check_call([sys.executable, "-m", "PyInstaller", script, "--onefile", "-w"])
 
         print(f"{script} has been packaged successfully!")
     except subprocess.CalledProcessError as e:
