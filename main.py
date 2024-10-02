@@ -5,27 +5,6 @@ from pytubefix import YouTube
 from pytubefix.cli import on_progress
 
 
-def install_packages(requirements_file='requirements.txt'):
-    import subprocess
-    import sys
-    try:
-        with open(requirements_file, 'r') as file:
-            packages = file.readlines()
-
-        for package in packages:
-            package = package.strip()
-            if package:
-                print(f"Installing package: {package}")
-                subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-        print("All packages installed successfully!")
-
-    except FileNotFoundError:
-        print(f"Error: {requirements_file} not found.")
-    except subprocess.CalledProcessError as e:
-        print(f"Error occurred during installation: {e}")
-
-
 def select_folder():
     desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
     folder = filedialog.askdirectory(initialdir=desktop_path)
@@ -57,10 +36,6 @@ def download_audio():
 
 
 if __name__ == "__main__":
-    # installs requirements.txt
-    install_packages()
-
-    # application
     root = tk.Tk()
     root.title("YouTube Audio Downloader")
 
